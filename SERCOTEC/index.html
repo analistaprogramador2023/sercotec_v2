@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Buscador de empresas | Sercotec</title>
+  <link href="estilos.css" rel='stylesheet'/>
+  <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+  <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script> 
+</head>
+<body>
+  <div class="header">
+    <div class="search-bar">
+      <i class="bi bi-house"></i>
+      <a href="https://www.sercotec.cl/">
+        <button class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+          </svg> Inicio
+        </button>
+      </a>
+      <a href="https://www.sercotec.cl/contacto">
+        <button class="btn-contact">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+          </svg> Contáctanos
+        </button>
+      </a>
+        <button class="btn-others">Otros</button>
+    </div>
+  </div>
+  
+
+    <div class="logo"></div>
+      <img src="Logo-Sercotec.png" width="222px"><alt ="Logo-Sercotec"></alt>
+    </a>
+    </div>
+
+
+	<div class="encabezado">
+    <header>
+      <h1 style="text-align: center;">Buscador de empresas</h1>
+    </header>
+    <main>
+      <form action="#" method="GET">
+        <label for="search">Buscar:</label>
+        <input type="text" id="search" name="search">
+        <label for="region">Región:</label>
+              <select id="region" name="region" onchange="actualizarComunas()">
+                  <option value="RM">Región Metropolitana</option>
+                  <option value="I">Arica y Parinacota</option>
+                  <option value="II">Tarapacá</option>
+                  <option value="III">Antofagasta</option>
+                  <option value="IV">Atacama</option>
+                  <option value="V">Coquimbo</option>
+                  <option value="VI">Valparaíso</option>
+                  <option value="VIII">Libertador General Bernardo O'Higgins</option>
+                  <option value="IX">Maule  </option>
+                  <option value="X">Ñuble</option>
+                  <option value="XI">Biobío</option>
+                  <option value="XII">Araucania</option>
+                  <option value="XIII">Los Ríos</option>
+                  <option value="XIV">Los Lagos</option>
+                  <option value="XV">Aysén</option>
+                  <option value="XVI">Magallanes y de la Antártica Chilena </option> 
+              </select>
+
+
+    <label for="comuna">Comuna:</label>
+    <select id="comuna" name="comuna">
+      <option value="Cerrillos">Cerrillos</option>
+      <option value="Cerro Navia">Cerro Navia</option>
+      <option value="Conchalí">Conchalí</option>
+      <option value="El Bosque">El Bosque</option>
+      <option value="Estación Central">Estación Central</option>
+      <option value="Huechuraba">Huechuraba</option>
+      <option value="Independencia">Independencia</option>
+      <option value="La Cisterna">La Cisterna</option>
+      <option value="La Florida">La Florida</option>
+      <option value="La Granja">La Granja</option>
+      <option value="La Pintana">La Pintana</option>
+      <option value="La Reina">La Reina</option>
+      <option value="Las Condes">Las Condes</option>
+      <option value="Lo Barnechea">Lo Barnechea</option>
+      <option value="Lo Espejo">Lo Espejo</option>
+      <option value="Lo Prado">Lo Prado</option>
+      <option value="Macul">Macul</option>
+      <option value="Maipú">Maipú</option>
+      <option value="Ñuñoa">Ñuñoa</option>
+      <option value="Pedro Aguirre Cerda">Pedro Aguirre Cerda</option>
+      <option value="Peñalolén">Peñalolén</option>
+      <option value="Providencia">Providencia</option>
+      <option value="Pudahuel">Pudahuel</option>
+      <option value="Quilicura">Quilicura</option>
+      <option value="Quinta Normal">Quinta Normal</option>
+      <option value="Recoleta">Recoleta</option>
+      <option value="Renca">Renca</option>
+      <option value="San Bernardo">San Bernardo</option>
+      <option value="San Joaquín">San Joaquín</option>
+      <option value="San José de Maipo">San José de Maipo</option>
+      <option value="San Miguel">San Miguel</option>
+      <option value="San Ramón">San Ramón</option>
+      <option value="Santiago">Santiago</option>
+      <option value="Vitacura">Vitacura</option>
+      <!--  opciones para todas las comunas de la región Metropolitana -->
+        
+    <script>
+        function actualizarComunas() {
+          // elementos select de región y comuna
+          var regionSelect = document.getElementById("region");
+          var comunaSelect = document.getElementById("comuna");
+        
+          // valor seleccionado en el select de región
+          var regionValue = regionSelect.value;
+      
+        
+        comunaSelect.options.length = 0;
+      
+        // Creamos las opciones de comuna según la región seleccionada
+        if (regionValue == "RM") {
+          // Región Metropolitana
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cerrillos", "Cerrillos");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cerro Navia", "Cerro Navia");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Conchalí", "Conchalí");
+          comunaSelect.options[comunaSelect.options.length] = new Option("El Bosque", "El Bosque");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Estación Central", "Estación Central");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Independencia", "Independencia");
+          comunaSelect.options[comunaSelect.options.length] = new Option("La Cisterna", "La Cisterna");
+          comunaSelect.options[comunaSelect.options.length] = new Option("La Florida", "La Florida");
+          comunaSelect.options[comunaSelect.options.length] = new Option("La Granja", "La Granja");
+          comunaSelect.options[comunaSelect.options.length] = new Option("La Pintana", "La Pintana");
+          comunaSelect.options[comunaSelect.options.length] = new Option("La Reina", "La Reina");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Las Condes", "Las Condes");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Lo Espejo", "Lo Espejo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Macul", "Macul");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Maipú", "Maipú");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Ñuñoa", "Ñuñoa");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pedro Aguirre Cerda", "Pedro Aguirre Cerda");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Peñalolén", "Peñalolén");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Providencia", "Providencia");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pudahuel", "Pudahuel");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quilicura", "Quilicura");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quinta Normal", "Quinta Normal");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Renca", "Renca");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Joaquín", "San Joaquín");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Miguel", "San Miguel");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Ramón", "San Ramón");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Santiago", "Santiago");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Vitacura", "Vitacura");
+          // falta agregar comunas
+        } else if (regionValue == "I") {
+          // Región de Arica y Parinacota
+          comunaSelect.options[comunaSelect.options.length] = new Option("Arica", "Arica");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Camarones", "Camarones");
+          comunaSelect.options[comunaSelect.options.length] = new Option("General Lagos", "General Lagos");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Putre", "Putre");
+          
+          //  falta agregar comunas
+        } else if (regionValue == "II") {
+          // Región de Tarapacá
+          comunaSelect.options[comunaSelect.options.length] = new Option("Alto Hospicio", "Alto Hospicio");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Camiña", "Camiña");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Colchane", "Colchane");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Huara", "Huara");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Iquique", "Iquique");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pica", "Pica");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pozo Almonte", "Pozo Almonte");
+
+        } else if (regionValue == "III") {
+          // Región de Antofagasta
+          comunaSelect.options[comunaSelect.options.length] = new Option("Antofagasta", "Antofagasta");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Calama", "Calama");
+          comunaSelect.options[comunaSelect.options.length] = new Option("María Elena", "María Elena");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Mejillones", "Mejillones");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Ollagüe", "Ollagüe");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Pedro de Atacama", "San Pedro de Atacama");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Sierra Gorda", "Sierra Gorda");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Taltal", "Taltal");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Tocopilla", "Tocopilla");
+
+          //  falta agregar comunas
+        } else if (regionValue == "IV") {
+          // Región de Atacama
+          comunaSelect.options[comunaSelect.options.length] = new Option("Alto del Carmen", "Alto del Carmen");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Caldera", "Caldera");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Chañaral", "Chañaral");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Copiapó", "Copiapó");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Diego de Almagro", "Diego de Almagro");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Freirina", "Freirina");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Huasco", "Huasco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Tierra Amarilla", "Tierra Amarilla");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Vallenar", "Vallenar");
+
+        } else if (regionValue == "V") {
+          // Región de Coquimbo
+          comunaSelect.options[comunaSelect.options.length] = new Option("Andacollo", "Andacollo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Canela", "Canela");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Combarbalá", "Combarbalá");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Coquimbo", "Coquimbo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Illapel", "Illapel");
+          comunaSelect.options[comunaSelect.options.length] = new Option("La Higuera", "La Higuera");
+          comunaSelect.options[comunaSelect.options.length] = new Option("La Serena", "La Serena");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Los Vilos", "Los Vilos");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Monte Patria", "Monte Patria");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Ovalle", "Ovalle");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Paihuano", "Paihuano");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Punitaqui", "Punitaqui");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Río Hurtado", "Río Hurtado");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Salamanca", "Salamanca");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Vicuña", "Vicuña");
+          //  falta agregar comunas
+          
+        } else if (regionValue == "VI") {
+          // Región de Valparaíso
+          comunaSelect.options[comunaSelect.options.length] = new Option("Algarrobo", "Algarrobo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Calle Larga", "Calle Larga");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cartagena", "Cartagena");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Casablanca", "Casablanca");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Catemu", "Catemu");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Concón", "Concón");
+          comunaSelect.options[comunaSelect.options.length] = new Option("El Quisco", "El Quisco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("El Tabo", "El Tabo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Hijuelas", "Hijuelas");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Juan Fernández", "Juan Fernández");
+          comunaSelect.options[comunaSelect.options.length] = new Option("La Calera", "La Calera");
+          comunaSelect.options[comunaSelect.options.length] = new Option("La Cruz", "La Cruz");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Limache", "Limache");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Llaillay", "Llaillay");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Los Andes", "Los Andes");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Nogales", "Nogales");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Olmué", "Olmué");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Panquehue", "Panquehue");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Putaendo", "Putaendo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Puchuncaví", "Puchuncaví");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quillota", "Quillota");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quintero", "Quintero");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Rinconada", "Rinconada");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Antonio", "San Antonio");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Esteban", "San Esteban");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Felipe", "San Felipe");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Santa María", "Santa María");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Santo Domingo", "Santo Domingo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Valparaíso", "Valparaíso");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Viña del Mar", "Viña del Mar");
+                  
+        } else if (regionValue == "VIII") {
+          // Región de Libertador General Bernardo O'Higgins
+          comunaSelect.options[comunaSelect.options.length] = new Option("Codegua", "Codegua");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Coinco", "Coinco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Coltauco", "Coltauco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Doñihue", "Doñihue");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Graneros", "Graneros");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Las Cabras", "Las Cabras");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Machalí", "Machalí");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Malloa", "Malloa");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Mostazal", "Mostazal");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Olivar", "Olivar");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Peumo", "Peumo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pichidegua", "Pichidegua");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quinta de Tilcoco", "Quinta de Tilcoco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Rancagua", "Rancagua");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Rengo", "Rengo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Requínoa", "Requínoa");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Fernando", "San Fernando");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Francisco de Mostazal", "San Francisco de Mostazal");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Vicente de Tagua Tagua", "San Vicente de Tagua Tagua");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Santa Cruz", "Santa Cruz");
+
+        } else if (regionValue == "IX") {
+          // Región de Maule
+          comunaSelect.options[comunaSelect.options.length] = new Option("Talca", "Talca");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Clemente", "San Clemente");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pelarco", "Pelarco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pencahue", "Pencahue");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Maule", "Maule");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Rafael", "San Rafael");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Curepto", "Curepto");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Constitución", "Constitución");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Empedrado", "Empedrado");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Río Claro", "Río Claro");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Javier", "San Javier");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Villa Alegre", "Villa Alegre");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Linares", "Linares");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Colbún", "Colbún");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Longaví", "Longaví");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Parral", "Parral");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Retiro", "Retiro");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Yerbas Buenas", "Yerbas Buenas");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cauquenes", "Cauquenes");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Chanco", "Chanco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pelluhue", "Pelluhue");
+
+          //  falta agregar comunas
+        } else if (regionValue == "X") {
+          // Región de Ñuble
+          comunaSelect.options[comunaSelect.options.length] = new Option("Chillán", "Chillán");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Bulnes", "Bulnes");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Ignacio", "San Ignacio");
+          comunaSelect.options[comunaSelect.options.length] = new Option("El Carmen", "El Carmen");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Yungay", "Yungay");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pemuco", "Pemuco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pinto", "Pinto");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quirihue", "Quirihue");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cobquecura", "Cobquecura");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Ninhue", "Ninhue");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Trehuaco", "Trehuaco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Carlos", "San Carlos");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Fabián", "San Fabián");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Nicolás", "San Nicolás");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Coelemu", "Coelemu");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Ránquil", "Ránquil");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Portezuelo", "Portezuelo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Chillán Viejo", "Chillán Viejo");
+
+          
+        } else if (regionValue == "XI") {
+          // Región de BioBio
+          comunaSelect.options[comunaSelect.options.length] = new Option("Concepción", "Concepción");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Talcahuano", "Talcahuano");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Hualpén", "Hualpén");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Chiguayante", "Chiguayante");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Pedro de la Paz", "San Pedro de la Paz");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Tomé", "Tomé");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Penco", "Penco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Lota", "Lota");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Coronel", "Coronel");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Santa Juana", "Santa Juana");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Florida", "Florida");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Hualqui", "Hualqui");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Lebu", "Lebu");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Arauco", "Arauco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Curanilahue", "Curanilahue");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Los Álamos", "Los Álamos");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cañete", "Cañete");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Contulmo", "Contulmo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Laja", "Laja");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Los Ángeles", "Los Ángeles");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Negrete", "Negrete");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Nacimiento", "Nacimiento");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Mulchén", "Mulchén");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quilaco", "Quilaco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quilleco", "Quilleco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Rosendo", "San Rosendo");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Santa Bárbara", "Santa Bárbara");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Tucapel", "Tucapel");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Yumbel", "Yumbel");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Alto Biobío", "Alto Biobío");
+
+        } else if (regionValue == "XII") {
+          // Región Araucania
+          comunaSelect.options[comunaSelect.options.length] = new Option("Temuco", "Temuco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Padre las Casas", "Padre las Casas");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Nueva Imperial", "Nueva Imperial");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Villarrica", "Villarrica");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Pucón", "Pucón");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Loncoche", "Loncoche");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Lautaro", "Lautaro");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Traiguén", "Traiguén");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Collipulli", "Collipulli");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Victoria", "Victoria");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Curacautín", "Curacautín");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Angol", "Angol");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Los Sauces", "Los Sauces");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Renaico", "Renaico");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Ercilla", "Ercilla");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Perquenco", "Perquenco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Galvarino", "Galvarino");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Melipeuco", "Melipeuco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cunco", "Cunco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Saavedra", "Saavedra");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Teodoro Schmidt", "Teodoro Schmidt");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Freire", "Freire");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Gorbea", "Gorbea");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Puerto Saavedra", "Puerto Saavedra");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Curarrehue", "Curarrehue");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Toltén", "Toltén");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Vilcún", "Vilcún");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cholchol", "Cholchol");
+
+          //  falta agregar comunas
+        } else if (regionValue == "XIII") {
+          // Región de Los Rios
+          comunaSelect.options[comunaSelect.options.length] = new Option("Valdivia", "Valdivia");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Corral", "Corral");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Lanco", "Lanco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Los Lagos", "Los Lagos");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Máfil", "Máfil");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Mariquina", "Mariquina");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Paillaco", "Paillaco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Panguipulli", "Panguipulli");
+          comunaSelect.options[comunaSelect.options.length] = new Option("La Unión", "La Unión");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Futrono", "Futrono");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Lago Ranco", "Lago Ranco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Río Bueno", "Río Bueno");
+
+          
+        } else if (regionValue == "XIV") {
+          // Región de Los Lagos
+          comunaSelect.options[comunaSelect.options.length] = new Option("Puerto Montt", "Puerto Montt");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Calbuco", "Calbuco");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cochamó", "Cochamó");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Fresia", "Fresia");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Frutillar", "Frutillar");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Los Muermos", "Los Muermos");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Llanquihue", "Llanquihue");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Maullín", "Maullín");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Puerto Varas", "Puerto Varas");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Castro", "Castro");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Ancud", "Ancud");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Chonchi", "Chonchi");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Curaco de Vélez", "Curaco de Vélez");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Dalcahue", "Dalcahue");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Puqueldón", "Puqueldón");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Queilén", "Queilén");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quellón", "Quellón");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quemchi", "Quemchi");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Quinchao", "Quinchao");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Osorno", "Osorno");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Puerto Octay", "Puerto Octay");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Purranque", "Purranque");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Puyehue", "Puyehue");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Río Negro", "Río Negro");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Juan de la Costa", "San Juan de la Costa");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Pablo", "San Pablo");
+
+          //  falta agregar comunas
+        } else if (regionValue == "XV") {
+          // Región de Aysen
+          comunaSelect.options[comunaSelect.options.length] = new Option("Coyhaique", "Coyhaique");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Lago Verde", "Lago Verde");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Aysén", "Aysén");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cisnes", "Cisnes");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Guaitecas", "Guaitecas");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Chile Chico", "Chile Chico");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Río Ibáñez", "Río Ibáñez");
+
+          
+        } else if (regionValue == "XVI") {
+          // Región de Magallanes y Antartica
+          comunaSelect.options[comunaSelect.options.length] = new Option("Punta Arenas", "Punta Arenas");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Laguna Blanca", "Laguna Blanca");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Río Verde", "Río Verde");
+          comunaSelect.options[comunaSelect.options.length] = new Option("San Gregorio", "San Gregorio");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Cabo de Hornos (Ex Navarino)", "Cabo de Hornos (Ex Navarino)");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Antártica", "Antártica");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Porvenir", "Porvenir");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Primavera", "Primavera");
+          comunaSelect.options[comunaSelect.options.length] = new Option("Timaukel", "Timaukel");
+
+          
+        } 
+        
+      }
+      </script>
+      
+    </select>
+      
+    <button class="oval-button" type="submit" >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg> Buscar</button>
+      
+    </form>
+</div>
+    
+		<section>
+			
+		</section>
+	</main>
+  <hr>
+  <div class="p-presentacion">
+    <p >¡Bienvenidos a Sercotec, la plataforma en línea donde puedes encontrar información sobre nuestras empresas asociadas!<br>
+
+    En Sercotec, nuestro objetivo es apoyar el crecimiento de las empresas y fomentar el emprendimiento en todo el país.<br>
+    Sabemos que, para lograrlo, es necesario contar con una red sólida de empresas comprometidas con estos mismos valores.<br>
+    
+    Es por eso que hemos creado esta plataforma para presentarte a nuestras empresas asociadas. <br>
+    En ella, podrás conocer más sobre sus productos y servicios, su historia y su visión de futuro. <br>
+    Además, podrás contactar con ellas directamente para conocer más detalles y establecer alianzas estratégicas.
+    
+    En Sercotec, estamos comprometidos con brindarte toda la información que necesitas para que puedas tomar las mejores decisiones de negocio.<br>
+    Confiamos en que esta plataforma te será de gran ayuda para conectarte con las empresas que buscas y que juntos podamos impulsar el desarrollo económico de nuestro país. ¡Bienvenidos!
+    </p>
+  </div>
+
+
+
+  <div class="search-results">
+    <ul>
+      <li>Resultado de búsqueda 1</li>
+      <li>Resultado de búsqueda 2</li>
+      <li>Resultado de búsqueda 3</li>
+    </ul>
+  </div>
+
+
+
+	<footer>
+		
+	</footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+.search-bar {
+  display: flex;
+  justify-content: flex-end; /* Alinea los elementos a la derecha */
+  background-color:#053861; /* Color de fondo */
+  padding: 10px; /* Espaciado interno */
+}
+.search-bar {
+  height: 8%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.search-bar button {
+  background-color: #0f69b4; /* Color de fondo */
+  border: none; /* Borde sin estilo */
+  color: rgb(253, 253, 253); /* Color de texto */
+  padding: 10px 20px; /* Espaciado */
+  text-align: center; /* Alineación de texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como bloque en línea */
+  font-size: 15px; /* Tamaño de letra */
+  border-radius: 5px; /* Radio de bordes */
+  margin-left: 10px; /* Espacio entre botones */
+}
+/* Efecto hover */
+.search-bar button:hover {
+  background-color: #6c9ec1;
+}
+
+.logo {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.encabezado {
+  
+  background-color: #053861;
+}
+h1{
+    background-color: #053861;
+    color:aliceblue;
+    text-align: center;
+    font-style:italic;
+    padding: 20px;
+    font-size:50px;
+    margin: 0
+}
+main{
+    background-color: #053861;
+    color:aliceblue;
+    text-align: center;
+    padding: 20px;
+    font-size:larger;
+    
+}
+
+
+
+
+input[type="text"] {
+    width: 300px;
+    height: 30px;
+    font-size:x-large;
+    text-align: center; /* Alineación de texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 15px; /* Tamaño de letra */
+    border-radius: 50px; 
+  }
+select {
+    width: 300px;
+    height: 30px;
+    font-size:x-large;
+    text-align: justify; /* Alineación de texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 15px; /* Tamaño de letra */
+    border-radius: 50px; 
+  }
+button {
+    background-color: #0f69b4; /* Color de fondo */
+    border: none; /* Borde sin estilo */
+    color: white; /* Color de texto */
+    padding: 10px 20px; /* Espaciado */
+    text-align: center; /* Alineación de texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 15px; /* Tamaño de letra */
+    border-radius: 50px; /* Radio de bordes para dar forma ovalada */
+  }
+.oval-button {
+    background-color: #0f69b4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 50px;
+  }
+  
+  .oval-button:active {
+    background-color: #6c9ec1;
+    box-shadow: none;
+    transform: translateY(1px);
+  }  
+      
+
+  
+.search-results {
+    width: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}    
+.search-results li {
+        flex-basis: 30%; /* Ancho de cada resultado */
+        margin-bottom: 20px; 
+        border: 1px solid #171616; /* Establece un borde para cada resultado */
+        padding: 10px; /* Establece el relleno para cada resultado */
+        margin-bottom: 10px;/* Espacio entre resultados */
+ }
+      
+     /* Establece el ancho del contenedor de resultados */
+  
+  
+ul {
+    list-style: none; /* Elimina los marcadores de lista */
+    padding: 0; /* Elimina el relleno predeterminado */
+  }
+  
+
+  .p-presentacion {
+    background-color: #f5f5f5;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    }
